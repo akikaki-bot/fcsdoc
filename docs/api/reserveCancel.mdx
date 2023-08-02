@@ -1,0 +1,42 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/reserveCancel
+```
+
+:::warning
+`/reserveCancel`は非推奨です！！！
+ここのAPIはWebSocket -> Cancel への乗り換えが済んでいます。
+:::
+
+## Infomation
+
+> <Highlight color="#ffcc22"> POST </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+## Properties
+
+| 値 | 型 | 必要なものであるか | 説明 |
+| --- | --- | --- | --- |
+| ReserveNo | String | YES | キャンセルする予約番号です。 |
+
+:::warning
+**もう一度警告！！！**<br></br>
+ここのAPIはWebSocketの方での処理が推奨されています！バグの温床です！！
+:::

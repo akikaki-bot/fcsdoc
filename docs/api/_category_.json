@@ -1,0 +1,8 @@
+{
+  "label": "FCS-API",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "中核システムについてここでは紹介をしています。すべてAPIとして実装しているので、拡張に向いています。"
+  }
+}

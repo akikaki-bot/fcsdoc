@@ -1,0 +1,94 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/stock
+/stock/post 
+/stock/remove
+```
+
+在庫管理
+
+## Infomation
+
+```
+/stock
+```
+
+> <Highlight color="#00ccff"> GET </Highlight>
+
+> <Highlight color="#ff660f"> Array </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+```
+/stock/post
+/stock/remove
+```
+
+> <Highlight color="#ffcc22"> POST </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+## Properties
+
+```
+/stock
+```
+
+> <Highlight color="#00ccff"> GET </Highlight>
+
+
+| 値 | 型 | いつももあるか | 説明 |
+| --- | --- | --- | --- |
+| data | StockData[] | YES | Array of StockData Object |
+
+### StockData
+
+```ts
+interface StockData {
+ /** ... */
+}
+```
+
+
+
+| 値 | 型 | いつももあるか | 説明 |
+| --- | --- | --- | --- |
+| name | String | YES | 在庫名 |
+| default | number / **nullable** | NO | 初期在庫 |
+| nowStock | number | YES | 現在の在庫 |
+| IsZero | Boolean | YES | 在庫が0であるか（未使用） |
+
+## Properties #2
+
+```
+/stock/post
+```
+
+> <Highlight color="#ffcc22"> POST </Highlight>
+
+上記[StockDataObject](/docs/api/stock#stockdata)と同様。Arrayは許可されていません。
+
+
+```
+/stock/remove
+```
+
+> <Highlight color="#ffcc22"> POST </Highlight>
+
+上記[StockDataObject](/docs/api/stock#stockdata)と同様。Arrayは許可されていません。

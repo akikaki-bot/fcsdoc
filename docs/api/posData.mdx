@@ -1,0 +1,49 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/posData
+```
+売り上げ解析データです。
+
+## Infomation
+
+> <Highlight color="#00ccff"> GET </Highlight>
+
+> <Highlight color="#ff660f"> Array </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+## Properties
+
+| 値 | 型 | いつももあるか | 説明 |
+| --- | --- | --- | --- |
+| posData | POSData[] | YES | POSDataの配列です。 |
+
+※POSDataは下を参照
+
+### POSData
+
+| 値 | 型 | いつももあるか | 説明 |
+| --- | --- | --- | --- |
+| itemName | String | YES | 解析済みのアイテム名です。 |
+| sales | Nullable Number | YES | 売り上げ回数です。 |
+| favorable_reputation | Nullable float | YES | 全体の割合です。高いほどめっちゃ人気です。 |
+
+
+
+

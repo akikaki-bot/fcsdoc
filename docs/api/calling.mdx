@@ -1,0 +1,38 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/calling
+```
+
+呼び出し中の予約番号を取得できます。
+
+## Infomation
+
+> <Highlight color="#00ccff"> GET </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+> <Highlight color="#ff660f"> Array </Highlight>
+
+
+## Properties
+
+| 値 | 型 | いつももあるか | 説明 |
+| --- | --- | --- | --- |
+| calling | String or Array | YES | 呼び出し中の予約番号を配列で取得できます。<br></br> また、呼び出し中番号がない場合は `String : "None"` が返ってきます。 |
+

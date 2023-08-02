@@ -1,0 +1,57 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/reserveItems
+```
+
+## Infomation
+
+> <Highlight color="#00ccff"> GET </Highlight>
+
+> <Highlight color="#ff660f"> Array </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+予約されているアイテムの情報です。
+
+返す値は `ReserveItem[]` です。
+
+## Properties [Partial]
+
+### 予約されているアイテムがない場合
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+| 値 | 型 | いつももあるか | 説明 |
+| --- | --- | --- | --- |
+| err | String | YES | エラー内容です。 |
+
+### 予約されているアイテムがある場合
+
+| 値 | 型 | いつももあるか | 説明 |
+| --- | --- | --- | --- |
+| items | Array | YES | 予約全データです。下のデータが配列として保管されています。 |
+
+
+> <Highlight color="#ff660f"> Array </Highlight>
+
+| 値 | 型 | いつももあるか | 説明 |
+| --- | --- | --- | --- |
+| Items | ItemObject | YES | 予約されているアイテムの数、名前が保管されています。 |
+| ReserveNo | String | YES | 予約番号です。全角文字・日本語は許されていません。 |
+| AllPrice | Number | YES | 予約総額が記録されています。 |
