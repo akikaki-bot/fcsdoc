@@ -6,12 +6,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'FCS Docs',
+  title: 'FCS Documentation',
   tagline: 'とてもみやすい',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://hakata.fcs-morishio.com',
+  url: 'https://tanaka.fcs-morishio.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -57,16 +57,31 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: "announcementBar_1",
+        content: `✨ メインサーバーは最新版で稼働中！`,
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'FCS Docs',
+        title: 'FestivalComprehensiveSystem',
         items: [
           {
             type: 'docSidebar',
             sidebarId : "tutorialSidebar",
             position: 'left',
-            label: 'Documentation',
+            label: 'ホーム',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId : "usethings",
+            position: 'left',
+            label: '使ってみる',
+          },
+          {
+            href: "https://github.com/akikaki-bot/bunkasai",
+            position: "right",
+            label : "Github"
           },
         ],
       },
@@ -74,16 +89,38 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'ドキュメント',
             items: [
               {
-                label: 'Tutorial',
+                label: 'FCSについての概要',
                 to: '/docs/intro',
+              },
+              {
+                label: 'FCS開発者ポータル',
+                to: '/docs/api/intro',
+              },
+            ],
+          },
+          {
+            title: 'FCSを使ってみる',
+            items: [
+              {
+                label: '使用方法',
+                to: '/docs/howtosomething/intro',
+              },
+            ],
+          },
+          {
+            title: '開発者',
+            items: [
+              {
+                label: 'Github',
+                to: 'https://github.com/akikaki-bot/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} FCS`,
+        copyright: `Copyright © ${new Date().getFullYear()} Akikaki a.k.a. F`,
       },
       prism: {
         theme: lightCodeTheme,

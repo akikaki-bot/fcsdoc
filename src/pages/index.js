@@ -29,7 +29,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`FCS | ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="つまりそういうこと <head />">
       <HomepageHeader />
     </Layout>

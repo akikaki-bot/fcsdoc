@@ -1,0 +1,48 @@
+# 開発者について
+
+---
+
+## Ｆ（べつめい：あきｋ）
+
+[FCS](https://github.com/akikaki-bot/bunkasai) のメイン開発者だよ。いえーいみってるー？
+
+## 現在の状態
+
+おなかいたい（おれ標準時 <DateElemtn RunCode="getFullYear" />年<PlusOneDateElemnt RunCode="getMonth" />月<DateElemtn RunCode="getDate" />日 <PlusOneDateElemnt RunCode="getHours" />時<DateElemtn RunCode="getMinutes" />分 OreST）
+
+## ぽまえだれだよ
+
+おれ
+
+## なにやってるの
+
+えいごとむきあってる
+
+## ？
+
+？
+
+## とてもとてもとてもImpotant
+
+### いまのところない
+
+## 鯖に何円払ってるの？
+
+A. つき1100円です
+
+## 鯖のスペック？
+
+A. RAM2GB Storage 100GBだった記憶です
+
+## けっきょくぽまえだれ？
+
+おれ
+
+export const DateElemtn = ({RunCode}) => {
+    return new Date()[RunCode]()
+}
+
+export const PlusOneDateElemnt = ({RunCode}) => {
+    if(RunCode === "getHours") return (((new Date()[RunCode]() + 1) > 24) ? 0 : new Date()[RunCode]() + 1)
+    return new Date()[RunCode]() + 1 
+}

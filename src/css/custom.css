@@ -28,3 +28,12 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+[data-theme="dark"] [class^="announcementBar_"] {
+  background: repeating-linear-gradient(45deg, #4fddbf, #4fddbf 15px, #25c2a0 15px, #25c2a0 30px);
+}
+
+[data-theme="light"] [class^="announcementBar_"] {
+  color: #000;
+  background: repeating-linear-gradient(45deg, #7cd6d9, #7cd6d9 15px, #3ec2c9 15px, #3ec2c9 30px);
+}
