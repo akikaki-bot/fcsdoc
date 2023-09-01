@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# FCS 開発者ポータル 
+# FCS 開発者ポータル (OLD)
 
 export const Highlight = ({children, color, black}) => (
   <span
@@ -17,15 +17,20 @@ export const Highlight = ({children, color, black}) => (
   </span>
 );
 
+:::warning
+  このDocsでは旧バージョンのAPIについて解説をしています！
+  [あたらしいのがすき！](/api/intro)ってひとは[ここ](/api/intro)みてくだしあ
+:::
+
 ## まずはこれ
 
 :::info
     詳しいことは作成者かGithub見てください
 :::
 
-## これがｼﾝ・APIDocsです
+## これがAPIDocsです
 
-すごいでしょ？これがｼﾝ・APIDocsらしいですよ
+すごいでしょ？これがAPIDocsらしいですよ
 
 ## BaseURI
 
@@ -42,10 +47,6 @@ export const Highlight = ({children, color, black}) => (
 ## このポータルの見方
 
 はい、このポータルの簡単な見方をご紹介します。
-
-FCS Gateway API (OLD : FCS API) は RESTAPI を採用しています。
-
-そのため、一部Pathでは特殊なMethodを使用する可能性があるので、覚悟してみて下しあ！
 
 ### Methods
 
@@ -70,20 +71,13 @@ FCS Gateway API (OLD : FCS API) は RESTAPI を採用しています。
 
 > <Highlight color="#00ccff"> GET </Highlight>
 
-これは `取得専用` かつ `GET` ヘッダーで送れ を意味しています。
+
+これは `取得専用` を意味しています。
 
 > <Highlight color="#ffcc22"> POST </Highlight>
 
-これは `送信専用` かつ `POST` ヘッダーで送れ を意味しています。
 
-> <Highlight color="#ffffcc" black> PATCH </Highlight>
-
-これは `送信専用` かつ `PATCH` ヘッダーで送れ を意味しています。
-
-> <Highlight color="#ff00ff"> DELETE </Highlight>
-
-これは `送信専用` かつ `DELETE` ヘッダーで送れ を意味しています。
-
+これは `送信専用` を意味しています。
 
 > <Highlight color="#ffc0ff"> WebSocket </Highlight>
 
@@ -99,11 +93,11 @@ FCS Gateway API (OLD : FCS API) は RESTAPI を採用しています。
 
 こんな感じで、帰ってくるであろうObjectの情報があります。
 
-### Method Properties
+### POST Properties
 
 | 値 | 型 | 必要なものであるか | 説明 |
 | --- | --- | --- | --- |
 | Ore | String | YES | おれ |
 | Some | Something | NO | なんこれ |
 
-こんな感じで、各Methodに必要なデータが書いてあります。
+こんな感じで、`POST`に必要なデータが書いてあります。

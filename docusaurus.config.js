@@ -59,7 +59,7 @@ const config = {
     ({
       announcementBar: {
         id: "announcementBar_1",
-        content: `✨ メインサーバーは最新版で稼働中！`,
+        content: `✨ RESTAPI 採用でもっと高速化！`,
       },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',

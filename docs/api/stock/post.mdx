@@ -1,0 +1,48 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/stock
+```
+
+ストックをセットします。
+
+アイテム名は`reserve.json`依存だよ。
+
+## Infomation
+
+> <Highlight color="#ffcc22"> POST </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+
+## Properties
+
+※めんどくさいので型ファイル直貼り
+
+```ts
+export interface StockData {
+    /** 在庫名 */
+    name : string
+    /** 初期在庫 */
+    default ?: number
+    /** 現在在庫 */
+    nowStock : number
+    /** 在庫がゼロであるか */
+    IsZero : boolean
+}
+```

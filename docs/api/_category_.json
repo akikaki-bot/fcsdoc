@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "中核システムについてここでは紹介をしています。すべてAPIとして実装しているので、拡張に向いています。"
+    "description": "中核システムについてここでは紹介をしています。すべてREST APIとして実装しているので、拡張&実装に向いています。"
   }
 }

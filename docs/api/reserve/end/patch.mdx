@@ -1,0 +1,35 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/reserve/end
+```
+
+予約を停止します。
+
+## Infomation
+
+> <Highlight color="#ffffcc" black> PATCH </Highlight>
+
+> <Highlight color="#c1000f" > void </Highlight>
+
+
+## Properties
+
+| 値 | 型 | 必要なものであるか | 説明 |
+| --- | --- | --- | --- |
+| ReserveNo | String | YES | キャンセルする予約番号です。 |

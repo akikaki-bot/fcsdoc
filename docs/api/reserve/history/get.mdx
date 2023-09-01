@@ -1,0 +1,35 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/reserve/history
+```
+
+予約履歴(WebSocket通信履歴)を返します。
+
+## Infomation
+
+> <Highlight color="#00ccff"> GET </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+
+## Properties
+
+| 値 | 型 | いつももあるか | 説明 |
+| --- | --- | --- | --- |
+| data | Object | YES | HistoryObjectが返ってきますよ |

@@ -1,0 +1,76 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/
+```
+
+## Infomation
+
+> <Highlight color="#ffc0ff"> WebSocket </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+(場合によって)
+> <Highlight color="#c1000f"> void </Highlight>
+
+FCSの中核システムです。
+
+これがないともう、、、世界の終わりです。
+
+## Detail
+
+ここで予約の呼び出し・管理・キャンセルを管理しています。
+
+:::info
+`/reserveCancel`
+っていうPathはありますが、誰も使ってません。
+:::
+
+## Codes
+
+### Receive WebSocket Data
+
+| 値 | 型 | 必要なものであるか | 説明 |
+| --- | --- | --- | --- |
+| type | enum WebSocketHeaderType | YES | 送信するWebSocketのタイプを入力してください。 |
+| ReserveNo | String | YES | 予約番号です。全角文字・日本語は許されていません。<br></br> どの予約番号についてのWebSocketDataなのかを認識する重要Itemです。 |
+| ClientNum | Number | YES | テーブル番号です。どのテーブルでの処理なのかを認識します。 |
+
+#### WebSocketHeaderType
+
+| 値 | 説明 |
+| --- | --- |
+| runReserve | 予約の準備が完了し、お客様を呼びます。 |
+| cancel | 予約をキャンセルします。 |
+| end | お客様呼び状態を終了します。 |
+
+### Client Send WebSocket Data
+
+| 値 | 型 | 必要なものであるか | 説明 |
+| --- | --- | --- | --- |
+| type | enum SendWebSocketType | YES | 受信するWebSocketのタイプです。 |
+| ReserveNo | String | NO | 予約番号です。全角文字・日本語は許されていません。<br></br> どの予約番号についてのWebSocketDataなのかを認識する重要Itemです。 |
+
+#### SendWebSocketType
+
+| 値 | 説明 |
+| --- | --- |
+| Reserved | 予約が処理されたことを受信することを表します。 |
+| cancel | 予約をキャンセルされたことを受信します。 |
+| fin | 予約が出来なくなったことを意味します。<br></br> `/ui/reserve` 画面を受け入れ拒否状態にします。 |
+| start | 予約がスタートしたことを意味します。 |

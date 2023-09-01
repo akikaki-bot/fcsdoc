@@ -1,0 +1,38 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/infomation/websocket
+```
+
+:::warning
+  `WebSocket /`とは関係がありません
+:::
+
+## Infomation
+
+> <Highlight color="#00ccff"> GET </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+接続中Clientの数を返す気がします。
+
+## Properties
+
+| 値 | 型 | いつもあるか | 説明 |
+| --- | --- | --- | --- |
+| clients | number | YES | 接続済のClient数 |

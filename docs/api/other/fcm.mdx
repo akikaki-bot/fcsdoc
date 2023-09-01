@@ -1,0 +1,40 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/fcm
+```
+
+FCMユーザートークンをサーバーに保存します。
+
+## Infomation
+
+> <Highlight color="#ffcc22"> POST </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+
+## Properties
+
+※めんどくさいので型ファイル直貼り
+
+```ts
+type RegisterData = {
+    token : string,
+    rid : string
+}
+```

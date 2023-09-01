@@ -1,0 +1,40 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/nine/waitlist
+```
+
+:::info
+   `GET /infomation/calling` となんら変わりはありません。
+:::
+
+## Infomation
+
+> <Highlight color="#00ccff"> GET </Highlight>
+
+> <Highlight color="#ff660f"> Array </Highlight>
+
+イベントカテゴリーの再呼び出し専用データ配列
+
+返す値は `String[]` です。
+
+## Properties 
+
+| 値 | 型 | いつももあるか | 説明 |
+| --- | --- | --- | --- |
+| calling | String[] | YES | 待ってくれてる予約番号たち |

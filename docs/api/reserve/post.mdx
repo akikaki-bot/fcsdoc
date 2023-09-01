@@ -1,0 +1,44 @@
+---
+sidebar_position: 2
+---
+
+export const Highlight = ({children, color, black}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: black ? '#000' : '#fff',
+      padding: '7px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);
+
+```
+/reserve
+```
+
+予約をします。
+
+## Infomation
+
+> <Highlight color="#ffcc22"> POST </Highlight>
+
+> <Highlight color="#c1c10f"> Object </Highlight>
+
+
+## Properties
+
+| 値 | 型 | 必要なものであるか | 説明 |
+| --- | --- | --- | --- |
+| Items | ItemObject | YES | 予約するアイテムの数、名前を保管してください。 |
+| ReserveNo | String | YES | 予約番号です。全角文字・日本語は許されていません。<br></br> Client側で生成してください。 |
+| AllPrice | Number | YES | 予約総額を入力してください。 |
+
+### ItemObject
+
+| 値 | 型 | 注意点 | 値の説明 |
+| --- | --- | --- | --- |
+| ItemName | (値名)String (値)Number | 鯖側で保管してある `reserve.json` を参考にしてください。 | 個数を設定します。 | |
+
