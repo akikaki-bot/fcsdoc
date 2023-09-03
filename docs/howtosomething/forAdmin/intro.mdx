@@ -1,0 +1,75 @@
+---
+sidebar_position: 1
+---
+
+# 管理者向け操作ガイド
+
+はい、ちょっといろいろと余裕がないので殴り書きしていきます。
+
+## Step1 : 監視しよう
+
+XServerコンソールパネルのページをずっと表示させておきます（できるかはしらん）
+
+iPadの`pm2 instance`の`log`をずっと表示させとくので、赤文字になってないか確認してほしい。
+
+赤文字を見たら、私にLineなんかしてほしいです
+
+### 注意点
+
+在庫管理の初期設定をしないまま、**予約処理**をすると確実にエラーを吐きます。
+（そうしてます）
+
+また、過去のログが残ってる可能性もあるのでそこは見極めてください。
+
+## Step2 : 異常がないか確認しよう
+
+XServerの使用率グラフが異常になってたら、一応LINEしてください。
+
+## Step3 : 処理がされてるか確認！
+
+`管理ページ > Log`
+
+のログが正しい処理がされているか確認してほしいです。
+
+### 識別子用語集
+
+`reserve` : 予約
+
+`reserveCancel` : 予約キャンセル
+
+`reserveA` : 予約受理
+
+`reserveCall` : 予約呼び出し
+
+`EndReserve` : 予約の一連の流れ終了
+
+`call(Re)` : もっかい呼び出し
+
+`6.7.8-Client-to-Save-new-data-for-9-client.` : 678の処理が9に行ったことを知らす。
+
+:::info
+※長いので省略して
+`678 to 9`
+でおねがい
+:::
+
+### フロー : キャンディのみ
+
+reserve -> reserveA -> reserveCall -> (call(Re)) -> EndReserve
+
+### フロー：キャンディ＋キャンドル
+
+reserve -> reserveA -> reserveCall -> (call(Re)) -> EndReserve -> 678 to 9 -> reserveA -> (call(Re)) -> reserveCall -> reserveEnd
+
+### フロー：キャンドル
+
+reserve -> reserveA -> reserveCall -> (call(Re)) -> EndReserve -> 678 to 9 
+
+## 多分これで終わり
+
+よかった！意外とないんだね！
+
+## P.S.
+
+あ、操作は慣れておいてくださいね（理不尽）
+
